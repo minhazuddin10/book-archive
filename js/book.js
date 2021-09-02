@@ -12,7 +12,7 @@ const searchbtn = () => {
   totalTitle.innerText = "";
 
   if (inputFieldValue === "" || inputFieldValue === " ") {
-    totalTitle.innerText = "Result Not found";
+    totalTitle.innerText = "Sorry Result Not found";
   } else {
     const url = `https://openlibrary.org/search.json?q=${inputFieldValue}`;
     fetch(url)
@@ -22,9 +22,9 @@ const searchbtn = () => {
 };
 
 const displayBook = (books) => {
-  const bookDetails = 
-books.docs
-;
+  const bookDetails =
+    books.docs
+    ;
 
   // output
   output.innerHTML = "";
@@ -43,7 +43,7 @@ https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg
                             <div class="card-body">
                                 <p> <b>Book Name:</b> ${book.title}</p>
                                 <p> <b>Autthor:</b> ${book.author_name ? book.author_name : "not found author name"}</p>
-                                <p> <b>Publisher:</b> ${book.publisher ? book.publisher : "NOT FOUND fublisher"}</p>
+                                <p> <b>Publisher:</b> ${book.publisher ? book.publisher : "NOT FOUND publisher"}</p>
                                 <p> <b>first publish year:</b> ${book.first_publish_year ? book.first_publish_year : "not found "}</p>
                             </div>
                         </div>                       
